@@ -5,7 +5,7 @@
 <ul>
   <% @tasks.each do |task| %>
   <li>
-    <%= link_to '[完了・削除]', task, method: :delete, data: {confirm: 'タスクを完了・削除してもよろしいですか？'} %>
-    <%= link_to task.id, task %>:<%= task.content %>/状態: <%= task.status %></li>
+    <%= link_to '[削除]', task, method: :delete, data: {confirm: 'タスクを削除してもよろしいですか？'} %>
+    <%= link_to task.id, task %>:<%= task.content %>　/状態: <%= task.status %></li>
   <% end %>
 </ul>
