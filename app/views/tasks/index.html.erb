@@ -9,3 +9,4 @@
     <%= link_to task.id, task %>:<%= task.content %>　/状態: <%= task.status %></li>
   <% end %>
 </ul>
+<%= paginate @tasks %>
