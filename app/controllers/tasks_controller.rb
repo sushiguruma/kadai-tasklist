@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
   
   def index
-    @tasks = Task.all.order(created_at: :desc).page(params[:page]).per(5)
+    @tasks = Task.all.order(status: :desc).order(created_at: :desc).page(params[:page]).per(5)
   end
   
   def show
@@ -43,7 +43,7 @@ class TasksController < ApplicationController
   
   def destroy
     
-    @task.destroy
+    @tasks.destroy
     
     flash[:success] = 'タスクを消去しました。'
     redirect_to tasks_url
