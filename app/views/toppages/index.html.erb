@@ -1,5 +1,12 @@
+<% if logged_in? %>
+
+<%= render 'tasks/tasks_not_done', tasks_not_done: @tasks_not_done %>
+
+<% else %>
 <div class = "center jumbotron">
   <div class = "text-center">
     <h1>TaskList</h1>
+    <%= link_to 'ユーザー登録', signup_path, class: 'btn btn-primary' %>
   </div>
 </div>
+<% end %>
