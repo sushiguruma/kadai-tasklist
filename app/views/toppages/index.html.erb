@@ -1,6 +1,6 @@
 <% if logged_in? %>
 
-<%= render 'tasks/tasks_not_done', tasks_not_done: @tasks_not_done %>
+<%= render 'tasks/tasks', tasks: @tasks %>
 
 <% else %>
 <div class = "center jumbotron">
